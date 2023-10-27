@@ -7,7 +7,7 @@ const produtos = [
       "desc": 'Rica em vitamina E'},
       {"id": 2,
       "nome": 'Melão',
-      "tipo": 'Fruta verde',
+      "tipo": 'Fruta amarela',
       "desc": 'Rico em vitamina A'},
       {"id": 3,
       "nome": 'Manga',
