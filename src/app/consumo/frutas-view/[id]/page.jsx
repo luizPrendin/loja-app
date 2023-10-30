@@ -2,7 +2,7 @@
 import { redirect } from "next/navigation";
 
 
-export default async function FrutaviewID({params}) {
+export default async function FrutaViewID({params}) {
   
     let fruta;
     

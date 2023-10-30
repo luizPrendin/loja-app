@@ -3,7 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 
-export default async function FrutaviewAll() {
+export default async function FrutaViewAll() {
   
     let frutas;
     
@@ -31,7 +31,7 @@ export default async function FrutaviewAll() {
                     <li key={fruta.id}>
                         <p>{fruta.nome}</p>
                         <p>{fruta.tipo}</p>
-                        <p><Link href={`/consumo/fruta-view/${fruta.id}`}>DESCRIÇÃO</Link></p>
+                        <p><Link href={`/consumo/frutas-view/${fruta.id}`}>DESCRIÇÃO</Link></p>
                         <hr />
                     </li>
                 ))}
