@@ -21,6 +21,22 @@ export default async function Frutaview() {
     
 
     return (
-    <div>Fruta view</div>
+    <div>
+        <h1>Fruta view</h1>
+
+        <div>
+            <ul>
+                {frutas.map((fruta)=>(
+                    <li key={fruta.id}>
+                        <p>{fruta.nome}</p>
+                        <p>{fruta.tipo}</p>
+                        <p>{fruta.desc}</p>
+                        <hr />
+                    </li>
+                ))}
+            </ul>
+        </div>
+
+    </div>
   )
 }
