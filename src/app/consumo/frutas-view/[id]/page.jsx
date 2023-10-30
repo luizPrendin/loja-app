@@ -1,16 +1,15 @@
 
-import Link from "next/link";
 import { redirect } from "next/navigation";
 
 
-export default async function FrutaviewAll() {
+export default async function FrutaviewID({params}) {
   
-    let frutas;
+    let fruta;
     
     
     try{
-        const response = await fetch("http://localhost:3000/dados/produto-api/0")
-        frutas = await response.json()
+        const response = await fetch(`http://localhost:3000/dados/produto-api/${params.id}`)
+        fruta = await response.json()
         
         
     
@@ -23,18 +22,18 @@ export default async function FrutaviewAll() {
 
     return (
     <div>
-        <h1>Fruta view</h1>
+        <h1>Fruta Selecionada</h1>
 
         <div>
             <ul>
-                {frutas.map((fruta)=>(
+               
                     <li key={fruta.id}>
                         <p>{fruta.nome}</p>
                         <p>{fruta.tipo}</p>
-                        <p><Link href={`/consumo/fruta-view/${fruta.id}`}>DESCRIÇÃO</Link></p>
+                        <p>{fruta.desc}</p>
                         <hr />
                     </li>
-                ))}
+              
             </ul>
         </div>
 
