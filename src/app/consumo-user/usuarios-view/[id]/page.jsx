@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 
-export async function UserViewId({params}){
+export default async function UserViewId({params}){
 
 let user;
 try{
